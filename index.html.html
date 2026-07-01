@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Ваше энергетическое состояние</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Стартовый экран -->
+        <div id="start-screen" class="screen active">
+            <h1>Узнайте своё энергетическое состояние</h1>
+            <p class="subtitle">Пройдите короткий тест и получите персональную диагностику вашей Матрицы</p>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <span class="icon">⚡</span>
+                    <p>Увидите текущий уровень энергии</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon">🔮</span>
+                    <p>Поймёте, какие энергии «спят»</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon">💫</span>
+                    <p>Получите план выхода из выгорания</p>
+                </div>
+            </div>
+            
+            <button id="start-btn" class="btn-primary">Начать тест</button>
+        </div>
+
+        <!-- Экран вопросов -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="question-counter">
+                Вопрос <span id="current-question">1</span> из <span id="total-questions">5</span>
+            </div>
+            
+            <h2 id="question-text"></h2>
+            
+            <div id="answers-container" class="answers">
+                <!-- Ответы будут добавлены через JS -->
+            </div>
+        </div>
+
+        <!-- Экран результатов -->
+        <div id="result-screen" class="screen">
+            <h2>Ваши результаты</h2>
+            
+            <div class="result-card">
+                <div class="energy-level" id="energy-level"></div>
+                <h3 id="result-title"></h3>
+                <p id="result-description"></p>
+                
+                <div class="sleeping-energies">
+                    <h4>🔮 Спящие энергии вашей Матрицы:</h4>
+                    <ul id="sleeping-list"></ul>
+                </div>
+                
+                <div class="recommendation">
+                    <h4>💫 Ваша первая рекомендация:</h4>
+                    <p id="recommendation-text"></p>
+                </div>
+            </div>
+            
+            <button id="restart-btn" class="btn-secondary">Пройти ещё раз</button>
+            <a href="https://t.me/your_username" target="_blank" class="btn-primary">Записаться на консультацию</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
